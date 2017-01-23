@@ -1,0 +1,28 @@
+<?php 
+$uploadfile = "upfiles/".$_FILES['upfile']['name'];
+//上传后文件所在的文件名和路径 
+$smallfile = "upfiles/small_".$_FILES['upfile']['name'];
+//上传后缩略图文件所在的文件名和路径 
+if($_FILES['upfile']['type'] != "image/pjpeg") 
+{ 
+  echo "文件类型错误"; //输出错误信息 
+} 
+else
+{ 
+  move_uploaded_file($_FILES['upfile']['tmp_name'], $uploadfile);
+  //上传文件 
+  $dstW = 200; //设定缩略图的宽度 
+  $dstH = 200; //设定缩略图的高度 
+  $src_image = ImageCreateFromJPEG($uploadfile);
+  //读取JPEG文件并创建图像对象 
+  $srcW = ImageSX($src_image); //获得图像的宽 
+  $srcH = ImageSY($src_image); //获得图像的高 
+  $dst_image = ImageCreateTrueColor($dstW,$dstH);
+  //创建新的图像对象 
+  ImageCopyResized($dst_image,$src_image,0,0,0,0,$dstW,$dstH,$srcW,$srcH);
+  //将图像重定义大小后写入新的图像对象 
+  ImageJpeg($dst_image,$smallfile); //创建缩略图文件 
+  echo "文件上传完成<BR>"; //输出上传成功的信息 
+  echo "<img src="$smallfile" mce_src="$smallfile"></img>";
+  //在页面上显示缩略图 
+} 
