@@ -1,5 +1,5 @@
 
-#include "gd.h"
+//#include "gd.h"
 
 
 //引出 dll 函数而已//可简单参考 php_gd.h
@@ -14,6 +14,18 @@
 #else
 #	define GD_API __declspec(dllexport)
 #endif
+
+#ifdef IN_EXE
+	typedef void * gdImagePtr;
+#else
+#	include "gd.h"
+#endif
+
+//如果实在要 stdcall 的话
+// #define USE_STDCALL
+// #ifdef USE_STDCALL
+// #	define GD_API __stdcall __declspec(dllexport) 
+// #endif
 
 //--------------------------------------------------
 //以下为函数列表,其实只是 C 语言的接口需要

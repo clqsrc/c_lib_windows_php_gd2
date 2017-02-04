@@ -1,0 +1,43 @@
+# Project: gcc_test1
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 03/02/17 17:15
+
+WXLIBNAME = wxmsw29u
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/main.o Objects/MingW/utf8.o
+LINKOBJ   = "Objects/MingW/main.o" "Objects/MingW/utf8.o"
+LIBS      = -L"C:/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Dev-Cpp/lib" -L"C:/Dev-Cpp/MinGW32/lib" -L"D:/test3/gd_test1/Release_TS" -L"D:/test3/libiconv_git/src111" -L"D:/test3/libiconv_git/lib" -l php_gd2 -l iconv  
+INCS      = -I"C:/Dev-Cpp/MinGW32/include" -I"D:/test3/gd_test1" -I"D:/test3/libiconv_git/include"
+CXXINCS   = -I"C:/Dev-Cpp/MinGW32/include" -I"C:/Dev-Cpp/" -I"C:/Dev-Cpp/include/common" -I"D:/test3/gd_test1" -I"D:/test3/libiconv_git/include"
+RCINCS    = --include-dir "C:/Dev-Cpp/include/common"
+BIN       = ../Release_TS/gcc_test1.exe
+DEFINES   = 
+CXXFLAGS  = $(CXXINCS) $(DEFINES)  
+CFLAGS    = $(INCS) $(DEFINES)  
+GPROF     = gprof.exe
+ifeq ($(OS),Windows_NT)
+   RM = del /Q
+   FixPath = $(subst /,\,$1)
+else
+   RM = rm -f
+   FixPath = $1
+endif
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(call FixPath,$(LINKOBJ)) "$(call FixPath,$(BIN))"
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
+
+Objects/MingW/main.o: $(GLOBALDEPS) main.c utf8.h
+	$(CC) -c main.c -o Objects/MingW/main.o $(CFLAGS)
+
+Objects/MingW/utf8.o: $(GLOBALDEPS) utf8.c
+	$(CC) -c utf8.c -o Objects/MingW/utf8.o $(CFLAGS)
