@@ -1506,6 +1506,8 @@ GD_API gdImagePtr imagecreatefromjpeg(char * filename)
 	int ignore_warning = 0; //默认为 0
 	gdImagePtr im = NULL;
 
+	printf("test: %s\r\n", filename); //test
+
 	if (fp == NULL) return 0;
 
 	im = gdImageCreateFromJpegEx(fp, ignore_warning);
@@ -2316,19 +2318,22 @@ PHP_FUNCTION(imagerectangle)
 
 /* {{{ proto bool imagefilledrectangle(resource im, int x1, int y1, int x2, int y2, int col)
    Draw a filled rectangle */
-PHP_FUNCTION(imagefilledrectangle)
+//PHP_FUNCTION(imagefilledrectangle)
+//imagefilledrectangle() 在 image 图像中画一个用 color 颜色填充了的矩形，其左上角坐标为 x1，y1，右下角坐标为 x2，y2。0, 0 是图像的最左上角。 
+GD_API void imagefilledrectangle (gdImagePtr im, int x1, int y1, int x2, int y2, int color)
 {
-	zval *IM;
-	long x1, y1, x2, y2, col;
-	gdImagePtr im;
-
-	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "rlllll", &IM, &x1, &y1, &x2, &y2, &col) == FAILURE) {
-		return;
-	}
-
-	ZEND_FETCH_RESOURCE(im, gdImagePtr, &IM, -1, "Image", le_gd);
-	gdImageFilledRectangle(im, x1, y1, x2, y2, col);
-	RETURN_TRUE;
+// 	zval *IM;
+// 	long x1, y1, x2, y2, col;
+// 	gdImagePtr im;
+// 
+// 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "rlllll", &IM, &x1, &y1, &x2, &y2, &col) == FAILURE) {
+// 		return;
+// 	}
+// 
+// 	ZEND_FETCH_RESOURCE(im, gdImagePtr, &IM, -1, "Image", le_gd);
+// 	gdImageFilledRectangle(im, x1, y1, x2, y2, col);
+	gdImageFilledRectangle(im, x1, y1, x2, y2, color);
+// 	RETURN_TRUE;
 }
 /* }}} */
 
@@ -2401,19 +2406,23 @@ PHP_FUNCTION(imagefilltoborder)
 
 /* {{{ proto bool imagefill(resource im, int x, int y, int col)
    Flood fill */
-PHP_FUNCTION(imagefill)
+//PHP_FUNCTION(imagefill)
+//imagefill() 在 image 图像的坐标 x，y（图像左上角为 0, 0）处用 color 颜色执行区域填充（即与 x, y 点颜色相同且相邻的点都会被填充）
+//clq 这个的效果和画图这样的软件相似,是会弄掉这个像素点周围的所有相似的像素点,如果要与其他类似的 api 差不多的背景填充,应该用 imagefilledrectangle
+GD_API void imagefill(gdImagePtr im, int x, int y, int color)
 {
-	zval *IM;
-	long x, y, col;
-	gdImagePtr im;
-
-	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "rlll", &IM, &x, &y, &col) == FAILURE) {
-		return;
-	}
-
-	ZEND_FETCH_RESOURCE(im, gdImagePtr, &IM, -1, "Image", le_gd);
-	gdImageFill(im, x, y, col);
-	RETURN_TRUE;
+// 	zval *IM;
+// 	long x, y, col;
+// 	gdImagePtr im;
+// 
+// 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "rlll", &IM, &x, &y, &col) == FAILURE) {
+// 		return;
+// 	}
+// 
+// 	ZEND_FETCH_RESOURCE(im, gdImagePtr, &IM, -1, "Image", le_gd);
+	//gdImageFill(im, x, y, col);
+	gdImageFill(im, x, y, color);
+	//RETURN_TRUE;
 }
 /* }}} */
 

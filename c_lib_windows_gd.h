@@ -91,6 +91,12 @@ GD_API void imagestring(gdImagePtr image, int _font, int x, int y, char * str, i
 //imagefttext — 使用 FreeType 2 字体将文本写入图像写入文本//size 字体大小, angle 角度(一般是0)
 GD_API char * imagettftext(gdImagePtr im, double size, double angle , int x , int y , int color , char * fontfile, char * text);
 
+//imagefill() 在 image 图像的坐标 x，y（图像左上角为 0, 0）处用 color 颜色执行区域填充（即与 x, y 点颜色相同且相邻的点都会被填充）
+//clq 这个的效果和画图这样的软件相似,是会弄掉这个像素点周围的所有相似的像素点,如果要与其他类似的 api 差不多的背景填充,应该用 imagefilledrectangle
+GD_API void imagefill(gdImagePtr im, int x, int y, int color);
+
+//imagefilledrectangle() 在 image 图像中画一个用 color 颜色填充了的矩形，其左上角坐标为 x1，y1，右下角坐标为 x2，y2。0, 0 是图像的最左上角。 
+GD_API void imagefilledrectangle (gdImagePtr im, int x1, int y1, int x2, int y2, int color);
 
 
 
