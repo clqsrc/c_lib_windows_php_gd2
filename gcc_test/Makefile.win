@@ -1,7 +1,7 @@
 # Project: gcc_test1
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 06/02/17 17:08
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 07/02/17 09:14
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
@@ -9,9 +9,9 @@ CC        = gcc.exe
 WINDRES   = "windres.exe"
 OBJ       = Objects/MingW/main.o Objects/MingW/utf8.o
 LINKOBJ   = "Objects/MingW/main.o" "Objects/MingW/utf8.o"
-LIBS      = -L"C:/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Dev-Cpp/lib" -L"C:/Dev-Cpp/MinGW32/lib" -L"D:/test3/gd_test1_git/php_gd2/Release_TS" -L"D:/test3/gd_test1_git/php_gd2" -L"D:/test3/libiconv_git/src111" -L"D:/test3/libiconv_git/c_lib_windows_libiconv/lib" -l php_gd2 -l iconv  
-INCS      = -I"C:/Dev-Cpp/MinGW32/include" -I"D:/test3/gd_test1_git/php_gd2" -I"D:/test3/libiconv_git/c_lib_windows_libiconv/include"
-CXXINCS   = -I"C:/Dev-Cpp/MinGW32/include" -I"C:/Dev-Cpp/" -I"C:/Dev-Cpp/include/common" -I"D:/test3/gd_test1_git/php_gd2" -I"D:/test3/libiconv_git/c_lib_windows_libiconv/include"
+LIBS      = -L"C:/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Dev-Cpp/lib" -L"C:/Dev-Cpp/MinGW32/lib" -L"../Release_TS" -L"D:/test3/libiconv_git/c_lib_windows_libiconv/lib" -l php_gd2 -l iconv  
+INCS      = -I"C:/Dev-Cpp/MinGW32/include" -I"../" -I"D:/test3/libiconv_git/c_lib_windows_libiconv/include"
+CXXINCS   = -I"C:/Dev-Cpp/MinGW32/include" -I"C:/Dev-Cpp/" -I"C:/Dev-Cpp/include/common" -I"../" -I"D:/test3/libiconv_git/c_lib_windows_libiconv/include"
 RCINCS    = --include-dir "C:/Dev-Cpp/include/common"
 BIN       = ../../../gd_test1/Release_TS/gcc_test1.exe
 DEFINES   = 
