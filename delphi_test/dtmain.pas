@@ -138,6 +138,7 @@ begin
 //10
 //	ImageTTFText($im,20,0,4,40,$yellow,"simkai.ttf",$cur_count);//我这里选择的本地字体是楷体，必须选择系统字库中存在的字
 
+  //在某些版本操作系统下,字体文件在和主程序在同一个文件夹,否则画不出字
   ImageTTFText(im, 20, 0, 4, 40, color, 'simkai.ttf', PAnsiChar(AnsiToUtf8('123abc中文好')));//我这里选择的本地字体是楷体，必须选择系统字库中存在的字
 
 
