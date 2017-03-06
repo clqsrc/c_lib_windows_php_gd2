@@ -90,7 +90,7 @@ MaxStackSize=1048576
 ImageBase=4194304
 ExeDescription=
 [Directories]
-OutputDir=D:\test3\gd_test1\Release_TS
+OutputDir=..\Release_TS
 UnitOutputDir=
 PackageDLLOutputDir=
 PackageDCPOutputDir=
@@ -138,5 +138,6 @@ Comments=
 Count=1
 Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
 [HistoryLists\hlOutputDirectorry]
-Count=1
-Item0=D:\test3\gd_test1\Release_TS
+Count=2
+Item0=..\Release_TS
+Item1=D:\test3\gd_test1\Release_TS

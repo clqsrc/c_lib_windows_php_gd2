@@ -57,6 +57,8 @@ GD_API void imagefilledellipse(gdImagePtr im, int cx , int cy , int width , int 
 //设置某个点的像素颜色
 //PHP_FUNCTION(imagesetpixel)
 GD_API void imagesetpixel(gdImagePtr im, int x, int y, int color);
+//可以认为是 imagegetpixel
+GD_API int imagecolorat(gdImagePtr im, int x, int y);
 
 //解析出一个颜色的 rgba 值//注意应该输出的指针就是 8 位的整数,位数不对的话应该会乱码的//尽量保存原来的 rgb 值,少用这个函数
 GD_API void ex_color2rgb(gdImagePtr img, int color, uint8 * r8, uint8 * g8, uint8 * b8, uint8 * a8);

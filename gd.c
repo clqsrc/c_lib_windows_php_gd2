@@ -1985,8 +1985,10 @@ PHP_FUNCTION(imagepalettecopy)
 
 /* {{{ proto int imagecolorat(resource im, int x, int y)
    Get the index of the color of a pixel */
-PHP_FUNCTION(imagecolorat)
+//PHP_FUNCTION(imagecolorat)
+GD_API int imagecolorat(gdImagePtr im, int x, int y)
 {
+	/*
 	zval *IM;
 	long x, y;
 	gdImagePtr im;
@@ -2012,7 +2014,13 @@ PHP_FUNCTION(imagecolorat)
 			RETURN_FALSE;
 		}
 	}
-}
+	*/
+
+	//--------------------------------------------------
+	//clq 感觉直接等于 gdImageGetPixel就行了
+	return gdImageGetPixel(im, x, y);
+
+}//
 /* }}} */
 
 /* {{{ proto int imagecolorclosest(resource im, int red, int green, int blue)

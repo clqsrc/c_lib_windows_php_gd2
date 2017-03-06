@@ -6,60 +6,14 @@
 --------------------Configuration: gd - Win32 Release_TS GD2--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5996.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPBA82.tmp" with contents
 [
 /nologo /MD /W3 /GX /O2 /I ".\\" /I "..\git_freetype2\c_lib_windows_freetype\ft27\freetype-2.7\include" /I "..\git_libpng\c_lib_windows_libpng\lpng1626" /I "..\git_libjpeg\c_lib_windows_libjpeg\jpegsr6_dll\jpeg-6b" /I "..\git_libwebp-0.5.1\c_lib_windows_libwebp\src_vc6_include" /I "..\.." /I "..\git_zlib\c_lib_windows_zlib\zlib128-dll\include" /I "libgd" /D "HAVE_LIBVPX" /D "HAVE_GD_WEBP" /D ZEND_DEBUG=0 /D HAVE_LIBGD15=1 /D HAVE_LIBGD204=1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "COMPILE_DL_GD" /D ZTS=1 /D "ZEND_WIN32" /D "PHP_WIN32" /D HAVE_GD_GIF_READ=1 /D HAVE_GD_GIF_CREATE=1 /D HAVE_GDIMAGECOLORRESOLVE=1 /D "HAVE_GD_PNG" /D "HAVE_GD_JPG" /D "HAVE_GD_WBMP" /D "HAVE_GD_XBM" /D HAVE_LIBGD=1 /D HAVE_LIBGD13=1 /D HAVE_LIBGD20=1 /D "USE_GD_IOCTX" /D HAVE_LIBFREETYPE=1 /D "USE_GD_IMGSTRTTF" /D HAVE_GD_STRINGTTF=1 /D HAVE_GD_BUNDLED=1 /D "MSWIN32" /D "HAVE_LIBPNG" /D "HAVE_LIBJPEG" /D "HAVE_GD_GD2" /D HAVE_GD_STRINGFTEX=1 /D HAVE_GD_IMAGESETBRUSH=1 /D HAVE_GD_IMAGESETTILE=1 /FR"Release_TS/" /Fo"Release_TS/" /Fd"Release_TS/" /FD /c 
 "D:\test3\gd_test1_git\c_lib_windows_php_gd2\c_lib_windows_gd.c"
 "D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_arc.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_color.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_crop.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_filter.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_interpolation.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_matrix.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_pixelate.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_rotate.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_transform.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_webp2.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_in.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c"
 ]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5996.tmp" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5997.tmp" with contents
-[
-/nologo /MD /W3 /GX /O2 /I ".\\" /I "..\git_freetype2\c_lib_windows_freetype\ft27\freetype-2.7\include" /I "..\git_libpng\c_lib_windows_libpng\lpng1626" /I "..\git_libjpeg\c_lib_windows_libjpeg\jpegsr6_dll\jpeg-6b" /I "..\git_libwebp-0.5.1\c_lib_windows_libwebp\src_vc6_include" /I "..\.." /I "..\git_zlib\c_lib_windows_zlib\zlib128-dll\include" /I "libgd" /D "HAVE_LIBVPX" /D "HAVE_GD_WEBP" /D ZEND_DEBUG=0 /D HAVE_LIBGD15=1 /D HAVE_LIBGD204=1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "COMPILE_DL_GD" /D ZTS=1 /D "ZEND_WIN32" /D "PHP_WIN32" /D HAVE_GD_GIF_READ=1 /D HAVE_GD_GIF_CREATE=1 /D HAVE_GDIMAGECOLORRESOLVE=1 /D "HAVE_GD_PNG" /D "HAVE_GD_JPG" /D "HAVE_GD_WBMP" /D "HAVE_GD_XBM" /D HAVE_LIBGD=1 /D HAVE_LIBGD13=1 /D HAVE_LIBGD20=1 /D "USE_GD_IOCTX" /D HAVE_LIBFREETYPE=1 /D "USE_GD_IMGSTRTTF" /D HAVE_GD_STRINGTTF=1 /D HAVE_GD_BUNDLED=1 /D "MSWIN32" /D "HAVE_LIBPNG" /D "HAVE_LIBJPEG" /D "HAVE_GD_GD2" /D HAVE_GD_STRINGFTEX=1 /D HAVE_GD_IMAGESETBRUSH=1 /D HAVE_GD_IMAGESETTILE=1 /FR"Release_TS_bundled/" /Fo"Release_TS_bundled/" /Fd"Release_TS_bundled/" /FD /c 
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd2copypal.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_arc_f_buggy.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gd.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gd2.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_io.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_io_dp.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_io_file.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_io_ss.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_jpeg.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_png.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_ss.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_topal.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_wbmp.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdcache.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdfontg.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdfontl.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdfontmb.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdfonts.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdfontt.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdft.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdhelpers.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdkanji.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdtables.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdxpm.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\wbmp.c"
-"D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\xbm.c"
-]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5997.tmp" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP5998.tmp" with contents
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPBA82.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPBA83.tmp" with contents
 [
 libwebp_dll.lib libpng.lib zlib.lib libjpeg.lib freetype2.lib libjpeg.lib libpng.lib zlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release_TS/php_gd2.pdb" /machine:I386 /out:"Release_TS\php_gd2.dll" /implib:"Release_TS/php_gd2.lib" 
 .\Release_TS\c_lib_windows_gd.obj
@@ -106,7 +60,7 @@ libwebp_dll.lib libpng.lib zlib.lib libjpeg.lib freetype2.lib libjpeg.lib libpng
 .\Release_TS_bundled\wbmp.obj
 .\Release_TS_bundled\xbm.obj
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP5998.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPBA83.tmp"
 <h3>Output Window</h3>
 Compiling...
 c_lib_windows_gd.c
@@ -122,85 +76,17 @@ D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(1533) : warning C4020: 'gdImage
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(1553) : warning C4013: 'gdImageCreateFromWebpCtx3' undefined; assuming extern returning int
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(1553) : warning C4047: '=' : 'struct gdImageStruct *' differs in levels of indirection from 'int '
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(1783) : warning C4013: 'VCWD_UNLINK' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2024) : warning C4101: 'im' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2042) : warning C4101: 'im' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2092) : warning C4101: 'im' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2110) : warning C4101: 'im' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2434) : warning C4101: 'im' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2589) : warning C4101: 'ind_type' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2725) : warning C4013: 'estrndup' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2917) : warning C4033: 'imagecopyresized' must return a value
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2921) : warning C4033: 'imagecopyresized' must return a value
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4743) : warning C4101: 'IM' : unreferenced local variable
-gd_arc.c
-gd_color.c
-gd_crop.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_crop.c(246) : warning C4018: '>=' : signed/unsigned mismatch
-gd_ctx.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(52) : warning C4028: formal parameter 1 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(52) : warning C4028: formal parameter 2 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(57) : warning C4142: benign redefinition of type
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(57) : warning C4028: formal parameter 3 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(62) : warning C4142: benign redefinition of type
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(62) : warning C4028: formal parameter 2 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(62) : warning C4028: formal parameter 3 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(67) : warning C4142: benign redefinition of type
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(161) : warning C4101: 'stream' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(154) : warning C4101: 'basefilter' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(154) : warning C4101: 'quality' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(155) : warning C4101: 'im' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd_ctx.c(157) : warning C4101: 'i' : unreferenced local variable
-gd_filter.c
-gd_interpolation.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_interpolation.c(2175) : warning C4018: '>=' : signed/unsigned mismatch
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_interpolation.c(2175) : warning C4018: '>=' : signed/unsigned mismatch
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_interpolation.c(2177) : warning C4018: '>=' : signed/unsigned mismatch
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_interpolation.c(2177) : warning C4018: '>=' : signed/unsigned mismatch
-gd_matrix.c
-gd_pixelate.c
-gd_rotate.c
-gd_transform.c
-gd_webp2.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\webpimg.h(75) : warning C4031: second formal parameter list longer than the first list
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\webpimg.h(75) : warning C4028: formal parameter 2 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\webpimg.h(75) : warning C4028: formal parameter 3 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\webpimg.h(111) : warning C4031: second formal parameter list longer than the first list
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\webpimg.h(111) : warning C4028: formal parameter 1 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\webpimg.h(111) : warning C4028: formal parameter 2 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\webpimg.h(175) : warning C4028: formal parameter 2 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_webp2.c(55) : warning C4013: 'ExUtilCopyPlane' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_webp2.c(360) : warning C4101: 'a' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_webp2.c(347) : warning C4101: 'argb' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_webp2.c(344) : warning C4101: 'pic' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_webp2.c(335) : warning C4101: 'ret' : unreferenced local variable
-phptmp.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(32) : warning C4013: 'imagecreatetruecolor' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(32) : warning C4047: '=' : 'struct gdImageStruct *' differs in levels of indirection from 'int '
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(33) : warning C4013: 'imagecopyresized' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(55) : warning C4013: 'imagecreatefromwebp' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(55) : warning C4047: '=' : 'struct gdImageStruct *' differs in levels of indirection from 'int '
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(57) : warning C4013: 'imagejpeg' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(58) : warning C4013: 'imagepng' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(69) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(75) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(79) : warning C4047: '=' : 'struct gdImageStruct *' differs in levels of indirection from 'int '
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(83) : warning C4013: 'ex_imageSmoothCircle' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(85) : warning C4013: 'imagecopyresampled' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(209) : warning C4028: formal parameter 1 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(209) : warning C4028: formal parameter 2 different from declaration
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\phptmp.c(209) : warning C4029: declared formal parameter list different from definition
-gd_gif_in.c
-gd_gif_out.c
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2032) : warning C4101: 'im' : unreferenced local variable
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2050) : warning C4101: 'im' : unreferenced local variable
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2100) : warning C4101: 'im' : unreferenced local variable
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2118) : warning C4101: 'im' : unreferenced local variable
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2442) : warning C4101: 'im' : unreferenced local variable
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2597) : warning C4101: 'ind_type' : unreferenced local variable
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2733) : warning C4013: 'estrndup' undefined; assuming extern returning int
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2925) : warning C4033: 'imagecopyresized' must return a value
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2929) : warning C4033: 'imagecopyresized' must return a value
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4751) : warning C4101: 'IM' : unreferenced local variable
 Generating Code...
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(332) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(337) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(348) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(349) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(350) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(392) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(760) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(769) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gif_out.c(770) : warning C4761: integral size mismatch in argument; conversion supplied
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(410) : warning C4700: local variable 'file' used without having been initialized
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(515) : warning C4700: local variable 'num_styles' used without having been initialized
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(543) : warning C4700: local variable 'index' used without having been initialized
@@ -234,92 +120,37 @@ D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(1783) : warning C4700: local va
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(1960) : warning C4700: local variable 'im' used without having been initialized
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(1982) : warning C4700: local variable 'src' used without having been initialized
 D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(1982) : warning C4700: local variable 'dst' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2000) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2070) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2139) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2167) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2202) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2296) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2314) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2365) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2384) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2402) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2462) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2485) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2826) : warning C4700: local variable 'im_src' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2826) : warning C4700: local variable 'im_dst' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2855) : warning C4700: local variable 'im_src' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2855) : warning C4700: local variable 'im_dst' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2884) : warning C4700: local variable 'im_src' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2884) : warning C4700: local variable 'im_dst' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2922) : warning C4716: 'imagecopyresized' : must return a value
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(3023) : warning C4716: 'imagettftext' : must return a value
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(3731) : warning C4700: local variable 'ignore_warning' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4185) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4340) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4385) : warning C4700: local variable 'im' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4757) : warning C4700: local variable 'im' used without having been initialized
-Compiling...
-gd.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(980) : warning C4244: '=' : conversion from 'double ' to 'float ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(990) : warning C4244: '=' : conversion from 'double ' to 'float ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(1039) : warning C4244: '=' : conversion from 'double ' to 'float ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(1040) : warning C4244: '=' : conversion from 'double ' to 'float ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(1147) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(1211) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(1396) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(1446) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd.c(2741) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
-gd2copypal.c
-gd_arc_f_buggy.c
-gd_gd.c
-gd_gd2.c
-gd_io.c
-gd_io_dp.c
-gd_io_file.c
-gd_io_ss.c
-gd_jpeg.c
-gd_png.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_png.c(79) : warning C4018: '!=' : signed/unsigned mismatch
-gd_ss.c
-gd_topal.c
-gd_wbmp.c
-gdcache.c
-gdfontg.c
-gdfontl.c
-gdfontmb.c
-gdfonts.c
-gdfontt.c
-Generating Code...
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_wbmp.c(70) : warning C4761: integral size mismatch in argument; conversion supplied
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gd_gd.c(216) : warning C4761: integral size mismatch in argument; conversion supplied
-Compiling...
-gdft.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdft.c(377) : warning C4101: 'cur_dir' : unreferenced local variable
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdft.c(645) : warning C4018: '<' : signed/unsigned mismatch
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdft.c(654) : warning C4018: '<' : signed/unsigned mismatch
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdft.c(702) : warning C4018: '<' : signed/unsigned mismatch
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdft.c(716) : warning C4018: '<' : signed/unsigned mismatch
-gdhelpers.c
-gdkanji.c
-gdtables.c
-gdxpm.c
-wbmp.c
-xbm.c
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\xbm.c(187) : warning C4013: 'strcasecmp' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\xbm.c(194) : warning C4013: 'isupper' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\xbm.c(194) : warning C4013: 'islower' undefined; assuming extern returning int
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\xbm.c(194) : warning C4013: 'isdigit' undefined; assuming extern returning int
-Generating Code...
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\xbm.c(169) : warning C4700: local variable 'buf' used without having been initialized
-D:\test3\gd_test1_git\c_lib_windows_php_gd2\libgd\gdkanji.c(81) : warning C4700: local variable 'tmp' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2078) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2147) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2175) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2210) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2304) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2322) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2373) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2392) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2410) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2470) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2493) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2834) : warning C4700: local variable 'im_src' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2834) : warning C4700: local variable 'im_dst' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2863) : warning C4700: local variable 'im_src' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2863) : warning C4700: local variable 'im_dst' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2892) : warning C4700: local variable 'im_src' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2892) : warning C4700: local variable 'im_dst' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(2930) : warning C4716: 'imagecopyresized' : must return a value
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(3031) : warning C4716: 'imagettftext' : must return a value
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(3739) : warning C4700: local variable 'ignore_warning' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4193) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4348) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4393) : warning C4700: local variable 'im' used without having been initialized
+D:\test3\gd_test1_git\c_lib_windows_php_gd2\gd.c(4765) : warning C4700: local variable 'im' used without having been initialized
 Linking...
    Creating library Release_TS/php_gd2.lib and object Release_TS/php_gd2.exp
 LINK : warning LNK4089: all references to "GDI32.dll" discarded by /OPT:REF
 LINK : warning LNK4089: all references to "USER32.dll" discarded by /OPT:REF
 LINK : warning LNK4089: all references to "libwebp.dll" discarded by /OPT:REF
 LINK : warning LNK4089: all references to "zlib1.dll" discarded by /OPT:REF
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP631E.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPBBEB.tmp" with contents
 [
 /nologo /o"Release_TS/gd_exe.bsc" 
 .\Release_TS\c_lib_windows_gd.sbr
@@ -365,14 +196,14 @@ Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP631E.tmp" with 
 .\Release_TS_bundled\gdxpm.sbr
 .\Release_TS_bundled\wbmp.sbr
 .\Release_TS_bundled\xbm.sbr]
-Creating command line "bscmake.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP631E.tmp"
+Creating command line "bscmake.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPBBEB.tmp"
 Creating browse info file...
 <h3>Output Window</h3>
 
 
 
 <h3>Results</h3>
-php_gd2.dll - 0 error(s), 160 warning(s)
+php_gd2.dll - 0 error(s), 82 warning(s)
 </pre>
 </body>
 </html>
