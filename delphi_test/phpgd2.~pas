@@ -80,8 +80,12 @@ procedure ex_color2rgb(img:Integer; color:Integer; r8:PByte; g8:PByte; b8:PByte;
 implementation
 
 
+//与 "aaline????" 一样,算法思想都来自 "计算机图形学原理及实践—C语言描述.pdf" ,基本上是其的简化版本算法//虽然是简化效果已经不错了
+
+
 //将一幅图像中的一块正方形区域拷贝到另一个图像中，平滑地插入像素值，因此，尤其是，减小了图像的大小而仍然保持了极大的清晰度。
-//这个简单的算法似乎比 php 的 gdImageCopyResized 好//用来做放大肯定是没问题的,缩小的话,其实再取一下相邻的值就可以了,至于取多少个相邻像素可以直接按像素来
+//这个简单的算法似乎比 php 的 gdImageCopyResized 好//用来做放大肯定是没问题的,缩小的话,其实再取一下相邻的值就可以了,至于取多少个相邻像素可以直接按像素来(完全没必要使用网上说的插值算法)
+
 function imagecopyresampled2(im_dst, im_src:Integer; dstX , dstY , srcX , srcY , dstW , dstH , srcW , srcH:Integer):Integer; //cdecl; external php_gd2;
 var
   w,h:integer;
@@ -89,6 +93,212 @@ var
   i2,j2:integer;
   c, c2:Integer;
   r8, g8, b8, a8:Byte;
+
+  pix_count:Integer;//计算缩小了多少倍,就是要取相邻的多少个像素点//有个潜在的 bug, 如果缩小得非常多就会在 rgb 合并是溢出,不过可以忽略这种情况
+  pix_count_square:Integer;//平方数//只是为优化而已
+
+
+  //计算一个点的像素值//取4个点的平均值//这是固定取 4 个点的算法,效果倒也还可以
+  function GetAAPixel(x,y:Integer):Integer;
+  var
+    xsrc,ysrc:Integer;
+    r, g, b, a:Integer;//rgb 值的总和
+
+    xadd,yadd:Integer; //取多少个点的值来算当前这个点
+    xsrc2,ysrc2:Integer;//避免越界
+    //pix_count:Integer;//计算缩小了多少倍,就是要取相邻的多少个像素点//有个潜在的 bug, 如果缩小得非常多就会在 rgb 合并是溢出,不过可以忽略这种情况
+    //pix_count_square:Integer;//平方数//只是为优化而已
+  begin
+    r := 0; g := 0; b := 0; a := 0;
+
+    //算出这个代表应该是原图的什么位置
+    xsrc := Trunc(x * srcW / w);
+    ysrc := Trunc(y * srcH / h);
+
+    //--------------------------------------------------
+    //为优化速度,计算应该放在函数体外
+//    pix_count := srcW div dstW;//其实应该用浮点数,但是那样太慢了
+//
+//    if pix_count<1 then pix_count := 1;
+//    //if pix_count<2 then pix_count := 2; //如果要放大的效果好点,可以用这个
+//
+//    pix_count_square := pix_count * pix_count;
+    //--------------------------------------------------
+
+    for xadd := 0 to pix_count-1 do
+    begin
+      for yadd := 0 to pix_count-1 do
+      begin
+        xsrc2 := xsrc + xadd; ysrc2 := ysrc + yadd;//避免越界
+        if xsrc2>srcW-1 then xsrc2 := srcW-1;
+        if ysrc2>srcH-1 then ysrc2 := srcH-1;
+
+        c := imagecolorat(im_src, xsrc2, ysrc2);
+        ex_color2rgb(im_src, c, @r8, @g8, @b8, @a8);//很快
+
+        r := r + r8; g := g + g8; b := b + b8; a := a + a8;
+
+      end;
+
+    end;
+
+//    c := imagecolorat(im_src, xsrc, ysrc);
+//    ex_color2rgb(im_src, c, @r8, @g8, @b8, @a8);//很快
+//
+//    r := r + r8; g := g + g8; b := b + b8; a := a + a8;
+
+    //c2 := imagecolorallocatealpha(im_dst, r, g, b, a);//很快
+    //c2 := imagecolorallocatealpha(im_dst, r div 4, g div 4, b div 4, a div 4);//很快
+    c2 := imagecolorallocatealpha(im_dst, r div pix_count_square, g div pix_count_square, b div pix_count_square, a div pix_count_square);//很快
+
+    Result := c2;
+  end;
+
+begin
+  Result := 1;
+
+  w := imagesx(im_dst);
+  h := imagesy(im_dst);
+
+  //--------------------------------------------------
+  //为优化速度,计算应该放在函数体外
+  pix_count := srcW div dstW;//其实应该用浮点数,但是那样太慢了
+
+  if pix_count<1 then pix_count := 1;
+  if pix_count<2 then pix_count := 2; //如果要放大的效果好点,可以用这个
+
+  pix_count_square := pix_count * pix_count;
+  //--------------------------------------------------
+
+
+  for i := 0 to w-1 do
+  begin
+
+    for j := 0 to h-1  do
+    begin
+      c := imagecolorat(im_src, i, j);
+      ex_color2rgb(im_src, c, @r8, @g8, @b8, @a8);//很快
+
+      //--------------------------------------------------
+      //算出这个代表应该是原图的什么位置
+      i2 := Trunc(i * srcW / w);
+      j2 := Trunc(j * srcH / h);
+      c := imagecolorat(im_src, i2, j2);
+      ex_color2rgb(im_src, c, @r8, @g8, @b8, @a8);//很快
+
+      //--------------------------------------------------
+
+      //c2 := imagecolorallocatealpha(im_dst, r8, g8, b8, a8);//很快
+      c2 := GetAAPixel(i, j);
+
+      imagesetpixel(im_dst, i, j, c2);//很快
+
+    end;
+
+  end;
+
+
+
+end;
+
+
+//取两个像素计算平均值(因为是平面,所以实际上是4个像素的平均值),可以用在要求不高的地方
+function imagecopyresampled2_2(im_dst, im_src:Integer; dstX , dstY , srcX , srcY , dstW , dstH , srcW , srcH:Integer):Integer; //cdecl; external php_gd2;
+var
+  w,h:integer;
+  i,j:integer;
+  i2,j2:integer;
+  c, c2:Integer;
+  r8, g8, b8, a8:Byte;
+
+  //计算一个点的像素值//取4个点的平均值//这是固定取 4 个点的算法,效果倒也还可以
+  function GetAAPixel(x,y:Integer):Integer;
+  var
+    xsrc,ysrc:Integer;
+    r, g, b, a:Integer;//rgb 值的总和
+
+    xadd,yadd:Integer; //取多少个点的值来算当前这个点
+    xsrc2,ysrc2:Integer;//避免越界
+  begin
+    r := 0; g := 0; b := 0; a := 0;
+
+    //算出这个代表应该是原图的什么位置
+    xsrc := Trunc(x * srcW / w);
+    ysrc := Trunc(y * srcH / h);
+
+    for xadd := 0 to 2-1 do
+    begin
+      for yadd := 0 to 2-1 do
+      begin
+        xsrc2 := xsrc + xadd; ysrc2 := ysrc + yadd;//避免越界
+        if xsrc2>srcW-1 then xsrc2 := srcW-1;
+        if ysrc2>srcH-1 then ysrc2 := srcH-1;
+
+        c := imagecolorat(im_src, xsrc2, ysrc2);
+        ex_color2rgb(im_src, c, @r8, @g8, @b8, @a8);//很快
+
+        r := r + r8; g := g + g8; b := b + b8; a := a + a8;
+
+      end;
+
+    end;
+
+//    c := imagecolorat(im_src, xsrc, ysrc);
+//    ex_color2rgb(im_src, c, @r8, @g8, @b8, @a8);//很快
+//
+//    r := r + r8; g := g + g8; b := b + b8; a := a + a8;
+
+    //c2 := imagecolorallocatealpha(im_dst, r, g, b, a);//很快
+    c2 := imagecolorallocatealpha(im_dst, r div 4, g div 4, b div 4, a div 4);//很快
+
+    Result := c2;
+  end;
+
+begin
+  Result := 1;
+
+  w := imagesx(im_dst);
+  h := imagesy(im_dst);
+
+  for i := 0 to w-1 do
+  begin
+
+    for j := 0 to h-1  do
+    begin
+      c := imagecolorat(im_src, i, j);
+      ex_color2rgb(im_src, c, @r8, @g8, @b8, @a8);//很快
+
+      //--------------------------------------------------
+      //算出这个代表应该是原图的什么位置
+      i2 := Trunc(i * srcW / w);
+      j2 := Trunc(j * srcH / h);
+      c := imagecolorat(im_src, i2, j2);
+      ex_color2rgb(im_src, c, @r8, @g8, @b8, @a8);//很快
+
+      //--------------------------------------------------
+
+      //c2 := imagecolorallocatealpha(im_dst, r8, g8, b8, a8);//很快
+      c2 := GetAAPixel(i, j);
+
+      imagesetpixel(im_dst, i, j, c2);//很快
+
+    end;
+
+  end;
+
+
+
+end;
+
+//第一个,很快的算法//只是简单地取坐标像素,缩小的话会丢失像素值,不过用来放大是没问题的
+function imagecopyresampled2_1(im_dst, im_src:Integer; dstX , dstY , srcX , srcY , dstW , dstH , srcW , srcH:Integer):Integer; //cdecl; external php_gd2;
+var
+  w,h:integer;
+  i,j:integer;
+  i2,j2:integer;
+  c, c2:Integer;
+  r8, g8, b8, a8:Byte;
+
 begin
   Result := 1;
 
@@ -123,6 +333,7 @@ begin
 
 
 end;  
+
 
 
 

@@ -121,6 +121,7 @@ var
   image, thumb:Integer; //图片
   BigWidth, BigHeigh:Integer;
   i:Integer;
+  ttt:Integer;
 begin
 
     image := imagecreatefrompng(PAnsiChar(sourePic));//PNG
@@ -139,6 +140,14 @@ begin
               imagecopyresampled2(thumb,image,0,0,0,0,dwidth,dheigh,BigWidth,BigHeigh);
             end;
 
+            //--------------------------------------------------
+//            ttt := imagecreatetruecolor(dwidth*4, dheigh*4); //aa4 算法
+//            imagecopyresampled2(ttt,image,0,0,0,0,dwidth*4,dheigh*4,BigWidth,BigHeigh);
+//
+//            imagecopyresampled2(thumb,ttt,0,0,0,0,dwidth,dheigh,dwidth*4,dheigh*4);
+
+            //--------------------------------------------------
+
             if(imagecopyresampled2(thumb,image,0,0,0,0,dwidth,dheigh,BigWidth,BigHeigh) = 1) then
             imagepng(thumb, PAnsiChar(smallFileName));
 
@@ -152,8 +161,15 @@ end;
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   //
-  pngthumb(ExtractFilePath(Application.ExeName)+'1.png', ExtractFilePath(Application.ExeName)+'2.png', 150, 150);
+  //pngthumb(ExtractFilePath(Application.ExeName)+'11.png', ExtractFilePath(Application.ExeName)+'2.png', 50, 50);
+  //pngthumb(ExtractFilePath(Application.ExeName)+'1.png', ExtractFilePath(Application.ExeName)+'2.png', 800, 800);
   //pngthumb(ExtractFilePath(Application.ExeName)+'1.png', ExtractFilePath(Application.ExeName)+'2.png', 2000, 2000);
+//  pngthumb(ExtractFilePath(Application.ExeName)+'1.png', ExtractFilePath(Application.ExeName)+'2.png', 650, 650);
+
+  //对小图片的性能不佳的话,要以放大后再缩小
+  pngthumb(ExtractFilePath(Application.ExeName)+'11.png', ExtractFilePath(Application.ExeName)+'22.png', 5000, 5000);//放大目标大小的 100 倍//从实际来看不必要 10 倍就可以了
+  pngthumb(ExtractFilePath(Application.ExeName)+'11.png', ExtractFilePath(Application.ExeName)+'22.png', 500, 500);//放大目标大小的 10 倍
+  pngthumb(ExtractFilePath(Application.ExeName)+'22.png', ExtractFilePath(Application.ExeName)+'2.png', 50, 50);
 
 end;
 
